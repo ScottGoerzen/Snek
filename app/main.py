@@ -11,6 +11,7 @@ import random
 #        
 #    def turninc(self):
 #       self.turn += 1
+#test
 
 @bottle.route('/static/<path:path>')
 def static(path):
