@@ -13,9 +13,14 @@ import random
 #       self.turn += 1
 
 class board_class(object):
-    width = 0
-    height = 0
-    gameBoard = [[]]
+	def __init__(self, w, h):
+		
+		self.width = w
+		self.height = h
+		self.gameBoard = [[]]
+		
+	def boardinit(self):
+		self.gameBoard = [[0]*self.width]*self.height
 
 games = []
 
@@ -26,22 +31,17 @@ def static(path):
 
 @bottle.post('/start')
 def start():
+	global games
     data = bottle.request.json
 #	S = snekspin()
     game_id = data['game_id']
-    board_width = data['width']
-    board_height = data['height']
     head_url = '%s://%s/static/head.png' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
-	newBoard = board_class()
-	newBoard.width = board_width
-	newBoard.height = board_height
-	
-	newBoard.gameBoard[
-	gameBoard = {game_id: newBoard}
-	game.append() 
+	newBoard = board_class(data['width'], data['height'])
+	newBoard.boardinit()
+	games[game_id] = newBoard
     # TODO: Do things with data
     #comment
 
