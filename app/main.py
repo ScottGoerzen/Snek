@@ -57,6 +57,8 @@ def start():
 def move():
     data = bottle.request.json
 	
+	
+	
     # TODO: Do things with data
     directions = ['up', 'left', 'down', 'right']
 	
@@ -64,7 +66,7 @@ def move():
 	
     return {
         #'move': directions[S.spinny()],
-        'move': 'left',
+        'move': random.choice(directions),
         'taunt': 'SSSSsSssssss!'
     }
 
