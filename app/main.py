@@ -11,6 +11,7 @@ import random
 #        
 #    def turninc(self):
 #       self.turn += 1
+#test
 
 class board_class(object):
     def __init__(self, w, h):
