@@ -50,7 +50,7 @@ def move():
 	
     return {
         #'move': directions[S.spinny()],
-        'move': 'left'
+        'move': 'left',
         'taunt': 'SSSSsSssssss!'
     }
 
