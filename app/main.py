@@ -12,7 +12,7 @@ import random
 #    def turninc(self):
 #       self.turn += 1
 
-class board(object):
+class board_class(object):
     width = 0
     height = 0
     gameBoard = [[]]
@@ -35,8 +35,12 @@ def start():
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
+	newBoard = board_class()
+	newBoard.width = board_width
+	newBoard.height = board_height
 	
-	gameBoard = {game_id:
+	newBoard.gameBoard[
+	gameBoard = {game_id: newBoard}
 	game.append() 
     # TODO: Do things with data
 
