@@ -2,15 +2,15 @@ import bottle
 import os
 import random
 
-class snekspin(object):
-    def __init__(self):
-        self.turn = 0
-        
-    def spinny(self):
-        return self.turn % 4
-        
-    def turninc(self):
-        self.turn += 1
+#class snekspin(object):
+#    def __init__(self):
+#        self.turn = 0
+#        
+#    def spinny(self):
+#        return self.turn % 4
+#        
+#    def turninc(self):
+#       self.turn += 1
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -46,10 +46,11 @@ def move():
     # TODO: Do things with data
     directions = ['up', 'left', 'down', 'right']
 	
-	S.turninc()
+	#S.turninc()
 	
     return {
-        'move': directions[S.spinny()],
+        #'move': directions[S.spinny()],
+        'move': 'left'
         'taunt': 'SSSSsSssssss!'
     }
 
