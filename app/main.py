@@ -12,6 +12,13 @@ import random
 #    def turninc(self):
 #       self.turn += 1
 
+class board(object):
+    width = 0
+    height = 0
+    gameBoard = [[]]
+
+games = []
+
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
@@ -29,6 +36,8 @@ def start():
         bottle.request.urlparts.netloc
     )
 	
+	gameBoard = {game_id:
+	game.append() 
     # TODO: Do things with data
 
     return {
