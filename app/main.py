@@ -20,7 +20,7 @@ def static(path):
 @bottle.post('/start')
 def start():
     data = bottle.request.json
-	S = snekspin()
+#	S = snekspin()
     game_id = data['game_id']
     board_width = data['width']
     board_height = data['height']
