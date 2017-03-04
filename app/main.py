@@ -39,9 +39,9 @@ def start():
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
-	newBoard = board_class(data['width'], data['height'])
-	newBoard.boardinit()
-	games[game_id] = newBoard
+    newBoard = board_class(data['width'], data['height'])
+    newBoard.boardinit()
+    games[game_id] = newBoard
     # TODO: Do things with data
     #comment
 
